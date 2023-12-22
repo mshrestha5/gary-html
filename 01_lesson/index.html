@@ -18,11 +18,10 @@
 </head>
 
 <body>
-    <h1>My Goals for the Year</h1>
-
-    <hr>
-
-    <nav>
+    <header> <h1>My Goals for the Year</h1> 
+        <!-- The aria-label attribute is part of the ARIA accessibility attributes. -->
+        <!-- So, the code <nav aria-label="primary-navigation"> is saying that the content inside the <nav> element is the primary navigation of the document, and assistive technologies can use the "primary-navigation" label to convey the purpose of this navigation section to users who rely on screen readers or other assistive devices. -->
+        <nav aria-label="primary-navigation">
         <ul>
             <li>
                 <a href="#html">Learning HTML</a>
@@ -31,36 +30,57 @@
                 <a href="#vacation">Planning a Vacation</a>
             </li>
         </ul>
-    </nav>
+    </nav></header>
+   
 
     <hr>
 
-    <section id="html">
-        <h2>I'm Ready to Learn HTML</h2>
-        <p>This is my first web page.</p>
-        <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300">
-        <figure>
-            <figcaption>An Example of HTML5 code</figcaption>
-            <p>
-                <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
-            </p>
-        </figure>
-        <h3>My Daily Schedule</h3>
-        <p>Let me tell you how:</p>
-        <ol>
-            <li>...I learn more about web dev.</li>
-            <li>...I plan out my schedule.</li>
-            <li>...I use resources from <abbr title="Mozilla Developer Network">
-                    <a href="https://developer.mozilla.org/">MDN</a>
-                </abbr>.</li>
-        </ol>
-    </section>
-    
+   
 
-    
+    <main> 
+        <article id="html"> 
+            <h2>I'm Ready to Learn HTML</h2>
+            <p>This is my first web page.</p>
+            <section>
+                <h3>HTML5</h3>
+                <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300">
+                <figure>
+                    <figcaption>An Example of HTML5 code</figcaption>
+                    <p>
+                        <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+                    </p>
+                </figure>
+            </section>
+            <section>
+                <h3>My Daily Schedule</h3>
+                <p>Let me tell you how:</p>
+                <ol>
+                    <li>...I learn more about web dev.</li>
+                    <li>...I plan out my schedule.</li>
+                    <li>...I use resources from <abbr title="Mozilla Developer Network">
+                            <a href="https://developer.mozilla.org/">MDN</a>
+                        </abbr>.</li>
+                </ol>
+                <aside>
+                    <details> 
+                        <summary>Guess the <mark>number of hours</mark> I code per day</summary>
+                        <p>I start at <time datetime="08:00">8 am</time> and I write code for <time datetime="PT3H">3 hours</time> every morning.</p>
+                    </details>
+                    </aside>
+
+            </section>
+        
+        </article>
+       
         <hr>
 
-        <section id="vacation">
+        <article id="vacation">
+            <h2>I Am Also Planning a Vacation</h2>
+            <p>I've been working hard and <em>really need a getaway</em>.</p>
+            <p>I live in <abbr title="Kansas">KS</abbr> so I want visit a beach.</p>
+
+                <section>
+
         <h3>Places I'd Like to Visit</h3>
         <ul>
             <li>
@@ -89,8 +109,10 @@
                 </figure>
             </li>
         </ul>
+        </section>
 
         <!-- TODO: Add more places -->
+        <section>
     <h3>Place I Want to Avoid</h3>
     <!-- A definition list is a list of terms and their corresponding definitions. It is created using the <dl> Definition List element, with <dt> Definition Term for terms and <dd>  Definition Description for definitions. -->
     <dl>
@@ -104,12 +126,19 @@
         <dd>These are also cold.</dd>
     </dl>
 </section>
+</article>
+</main>
 
     <hr>
-    &lt;&lt;&lt; &copy; <a href="about.html">Dave Gray </a> &gt;&gt;&gt;
-    <p>
+    <footer>
+        <p>    
+            &lt;&lt;&lt; &copy; <a href="about.html">Dave Gray </a> &gt;&gt;&gt;
+        </p>
+        <p>
         <a href="#">Back to Top</a>
-    </p>
+        </p>
+    </footer>
+    
     
 </body>
 </html>
